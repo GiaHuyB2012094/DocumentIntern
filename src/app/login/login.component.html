@@ -1,0 +1,19 @@
+<div id="container">
+  <form class="form-login" [formGroup]="form">
+    <h1>Login</h1>
+
+    <input
+      type="text"
+      formControlName="username"
+      placeholder="Typing Username"
+    />
+    <input
+      type="password"
+      formControlName="password"
+      placeholder="Typing Password"
+    />
+
+    <button (click)="login()" [disabled]="!form.valid">Login</button>
+    <!-- {{ form.value | json }} -->
+  </form>
+</div>
